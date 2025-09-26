@@ -1,107 +1,53 @@
-🚀 Flask REST API – User Management
-📌 Overview
+# Flask REST API – User Management
 
-This project is a simple REST API built with Flask for managing user data.
-It supports CRUD operations (Create, Read, Update, Delete) and uses an in-memory dictionary as the database.
+## Overview
+A simple REST API built with Flask to manage user data. Supports CRUD operations using an in-memory dictionary.
 
-🔧 Tech Stack
+## Tech Stack
+- Python 3
+- Flask
+- Postman / cURL
 
-Python 3
+## Features
+- GET /users → Fetch all users
+- GET /users/<id> → Fetch a single user
+- POST /users → Add new user
+- PUT /users/<id> → Update user
+- DELETE /users/<id> → Delete user
 
-Flask
+## Setup
+1. Clone repo
+   git clone https://github.com/your-username/flask-rest-api.git
+   cd flask-rest-api
 
-Postman / cURL (for testing)
+2. Create virtual environment
+   python -m venv venv
+   # Windows: venv\Scripts\activate
+   # Mac/Linux: source venv/bin/activate
 
-⚡ Features
+3. Install Flask
+   pip install flask
 
-GET /users → Fetch all users
+4. Run app
+   python app.py
 
-GET /users/<id> → Fetch a single user by ID
+App runs on http://127.0.0.1:5000
 
-POST /users → Add a new user
-
-PUT /users/<id> → Update an existing user
-
-DELETE /users/<id> → Delete a user
-
-📂 Installation & Setup
-
-Clone the repo
-
-git clone https://github.com/your-username/flask-rest-api.git
-cd flask-rest-api
-
-
-Create a virtual environment (recommended)
-
-python -m venv venv
-
-
-Windows:
-
-venv\Scripts\activate
-
-
-Mac/Linux:
-
-source venv/bin/activate
-
-
-Install dependencies
-
-pip install flask
-
-
-Run the Flask app
-
-python app.py
-
-
-API will start on:
-
-http://127.0.0.1:5000
-
-🧪 API Endpoints
-🔹 Get all users
-GET /users
-
-🔹 Get user by ID
-GET /users/<id>
-
-🔹 Add new user
+## Endpoints Examples
 POST /users
-Content-Type: application/json
 {
   "name": "Charlie",
   "email": "charlie@example.com"
 }
 
-🔹 Update user
-PUT /users/<id>
-Content-Type: application/json
+PUT /users/1
 {
   "email": "new_email@example.com"
 }
 
-🔹 Delete user
-DELETE /users/<id>
+## Testing
+- Browser/Postman
+- cURL: curl http://127.0.0.1:5000/users
 
-🛠 Testing the API
-Using Postman
-
-Import endpoints manually and send requests.
-
-Or use the provided collection (if added to repo).
-
-Using cURL
-curl http://127.0.0.1:5000/users
-
-📌 Outcome
-
-Learned Flask basics (routes, request handling, JSON).
-
-Implemented CRUD operations in REST.
-
-Tested API using Postman & curl.
-
-✨ Author: Your Name
+## Outcome
+Built and tested a working REST API with Flask.
